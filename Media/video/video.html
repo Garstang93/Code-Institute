@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Video Challenge</title>
+		<style>
+
+			body { 
+			background-color: black
+			}
+
+			#bunny {
+				position: relative;
+				top: 250px;
+				-webkit-filter: grayscale(3);
+				text-align: center;
+				margin-top: 0px;
+				margin-right: auto;
+				margin-bottom: 0px;
+				margin-left: auto;
+			}
+			#audio {
+				position: relative;
+				text-align: center;
+				margin: 0 auto 0 auto;
+				top: 250px;
+				right: 170px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="bunny">
+			<video controls="controls" autoplay preload poster="bunny.jpg" muted loop ="true">
+				<source src="MP4_Bunny.mp4#t=0,60">
+				<source src="OGV_Bunny.ogv#t=0,60">
+				<source src="WebM_Bunny.webm#t=0,60">
+			</video>
+		</div>
+		<div id="audio">
+			<audio controls="controls" preload loop>
+		 		<source src="tail.mp3" type="audio/mpeg; codecs=mp3"/>
+		 		<source src="beat.ogg" type="audio/ogg; codecs=vorbis"/>
+			</audio>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   <meta charset="UTF-8">
+      <title>Form</title>
+      <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+      <style type="text/css">
+
+      body{
+         font-family: 'Roboto', sans-serif;
+      }
+         #container{
+            width: 550px;
+            margin: auto;
+
+         }
+
+         legend{
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            padding: 4px 15px;
+            margin-top: 20px;
+            clear: both;
+            float: left;
+         }
+            
+         label.field{
+            display: block;
+            text-align: left;
+            width: 100px;
+            float: left;
+            margin-top: 20px;
+
+         }
+         input{
+            width: 220px;
+            border-radius: 5px;
+            padding: 6px 8px;
+            display: inline-block;
+            margin-top: 20px;
+            clear: both;
+         }
+         .field{
+            padding: 6px 8px;
+            clear: both;
+
+         }
+         #currency{
+             width: 220px;
+             border-radius: 5px;
+             padding: 6px 8px;
+         }
+
+         fieldset{
+            width: 450px;
+            border: 1px solid #999;
+            border-radius: 20px;
+            clear: both;
+            padding: 6px 8px;
+            margin-bottom: 100px;
+            
+         }
+         .label{
+            display: inline-block;
+            float: left;
+            clear: both;
+            text-align: left;
+            width: 100px;
+            margin-top: 20px;
+            border-radius: 20px;
+            padding: 6px 8px;
+            font-size: 16px;
+           }
+         .submit {
+            margin-bottom: 10px;
+            margin-left: 100px;
+         }
+         #checkbox {
+         	padding: 6px 8px;
+         	margin-top: 20px;
+         	clear: both;
+         }
+         fieldset {
+         	width: 450px;
+         	margin-bottom: 5px;
+         	border: none;
+         }
+
+         form h1 {
+        	font-size: 30px;
+        	background-color: #fff;
+        	border-radius: 5px;
+        	border: 1px solid #999;
+        	padding: 6px 8px;
+        	width: 160px;
+
+    	 }
+    	 label.field,
+    	 legend {
+        	display: block;
+        	text-align: left;
+       	 	width: 100px;
+        	float: left;
+        	clear: both;
+
+    	 }
+    	 #checkbox input {
+        	width: 25px;
+        	margin-top: 20px;
+        	padding: 6px 8px;
+        	clear: both;
+    	 }
+    	 form {
+    	 	background-color:rgba(129, 187, 201,.2);
+    	 	clear: both;
+    	 }
+    	 #radio {
+    	 	padding: 6px 8px;
+    	 	clear: both;
+    	 }
+    	 #radio input {
+    	 	width: 25px;
+    	 	margin-top: 20px;
+    	 	clear: both;
+    	 }
+    	 b {
+    	 	font-size: 16px;
+    	 }
+    	 #zodiac_signs {
+    	 	width: 220px;
+    	 	border-radius: 5px;
+    	 	padding: 6px 8px;
+    	 	clear: both;
+    	 }
+
+      </style>
+   </head>
+   <body>
+    	<div id="container">
+    	  <form>
+    	   <h1>Registration</h1>
+    		<fieldset>
+    				<label for="fname" class="label">First Name* :</label>
+    				<input class="field" placeholder="First name" required="" type="text" name="fname"/>
+
+    				<label for="email" class="label">Email* :</label>
+    				<input class="field" id="email" autofocus placeholder="email address" required="" name="email"  type="email"/>
+
+    				<label for="age" class="label">Age* :</label>
+    				<input class="field" placeholder="Enter your age" required="" name="age" type="number" min="18" max="99" title="must be over 18">
+ 
+    				<label for="url" class="label">Website :</label>
+    				<input class="field" placeholder="website url" name="website"  type="url"/>
+
+    				<label for="telephone" class="label">Telephone :</label>
+    				<input class="field" placeholder="Mobile Number" name="Telephone" pattern="[0-9]{11}" title="Please provide mobile phone number" type="telephone"/>
+
+    				<label for="password" class="label">Password :</label>
+    				<input class="field" placeholder="password" id="password" name="password" type="password"/>
+
+    				<label for="passport" class="label">Passport :</label>
+    				<input class="field" placeholder="Passport number" name="passport" type="text" pattern="[0-9]{7}[A-Za-z]{1}" title="Seven numbers followed by 1 upper or lowercase letter"/>
+
+    				<label for="postcode" class="label">Postcode :</label>
+    				<input class="field" placeholder="postcode" name="postcode" type="text" pattern="[A-Z]{2}[0-9]{1,2,3}[A-Z]{2}" title="UK postcode"/>
+
+    				<label for="debit/credit card" class="label">Credit Card :</label>
+    				<input class="field" placeholder="Card Number" name="card" type="text" pattern="[0-9]{16}" title="16 digit number that appears on your card"/>
+
+    				<label for="date" class="label">Date :</label>
+    				<input class="field" name="date" type="date"/>
+
+    		</fieldset>
+    		<fieldset id="checkbox">
+    			<legend><b>Meal Choice:</b></legend>
+    				<label for="starter">Starter</label>
+    				<input id="starter" type="checkbox" value="starter"/>
+
+    				<label for="main">Main</label>
+    				<input id="main" type="checkbox" value="main"/>
+
+    				<label for="dessert">Dessert</label>
+    				<input id="dessert" type="checkbox" value="Dessert"/>
+    		</fieldset>
+    		<fieldset id="radio">
+    			<legend><b>Gender:</b></legend>
+					<label for="male">Male</label>
+					<input id="male" type="radio" name="gender" value="male"/>
+
+					<label for="female">Female</label>
+					<input id="female" type="radio" name="gender" value="female"/>
+
+					<label for="other">Other</label>
+					<input id="other" type="radio" name="gender" value="other"/>
+    		</fieldset>
+    		<fieldset id="dropdown">
+				<legend><b>Zodiac sign:</b></legend>
+				<select id="zodiac_signs">
+					<option value="sun">Sun</option>
+					<option value="moon">Moon</option>
+					<option value="earth">Earth</option>
+					<option value="wind">Wind</option>
+					<option value="fire">Fire</option>
+					<option value="water">Water</option>
+				</select>
+			</fieldset>
+			<fieldset id="datalist">
+				<legend><b>Music Genre:</b></legend>
+				<input list="music_genre" placeholder="Start typing for autofill" name="music_genre">
+				<datalist id="music_genre">
+					<option value="ska"></option>
+					<option value="rock"></option>
+					<option value="rap"></option>
+					<option value="dubstep"></option>
+					<option value="house"></option>
+				</datalist> 
+			</fieldset>
+			<fieldset id="range_input">
+                	<label for="range" class="field">Range:</label>
+                	<input id="range" type="range" name="range" min="0" max="11">
+            </fieldset>
+    		<fieldset>
+    				<label for="submit"></label>
+    				<input type="submit" class="submit" value="submit"/>
+			</fieldset>
+    	  </form>
+    	</div>
+   </body>
+
+</html>
